@@ -2,6 +2,23 @@
 
 > CodeBot 시스템은 개발자와 리뷰어간의 원활한 코드리뷰 수행을 지원하기 위해 다양한 자동화 기능을 제공하는 코드리뷰 지원 서비스입니다.
 
+## 목차
+
+* [개요](#개요)
+* [준비 사항](#준비-사항)
+* [CodeBot 설정](#codebot-설정)
+  * [GitHub Personal access token 등록](#github-personal-access-token-등록)
+  * [Repository 조회](#repository-조회)
+  * [Repository 설정](#repository-설정)
+* [CodeBot 분석 수행](#codebot-분석-수행)
+* [CodeBot 분석 결과 확인](#codebot-분석-결과-확인)
+  * [Repository Code Size](#repository-code-size)
+  * [Issue(Inspection)](#issue(inspection))
+  * [Complexity](#complexity)
+  * [Duplication](#duplication)
+  * [CAM(Code Architecture Metric)](#cam(code-architecture-metric))
+  * [AutoFix Recommendations](#autofix-recommendations)
+
 ## 개요
 
 CodeBot은 GitHub으로부터 PR(Pull Request) 이벤트가 발생하면, 변경된 소스를 기준으로 다양한 정적 분석(Static Analyst)을 수행하고, 리뷰어를 자동 지정하는 등의 코드리뷰 활동에 필요한 다양한 서비스를 제공합니다.
@@ -26,7 +43,7 @@ CodeBot은 GitHub으로부터 PR(Pull Request) 이벤트가 발생하면, 변경
 
 ## 준비 사항
 
-### Codebot 서비스 사용 준비
+### Codebot 사용 준비
 
 CodeBot 사용을 위해서는 GitHub에 대한 접근 권한이 필요합니다. 이를 위해 GitHub에서 Personal Access Token을 생성한 후 CodeBot에 등록이 필요합니다.
 
@@ -70,7 +87,7 @@ CodeBot 사용을 위해서는 GitHub에 대한 접근 권한이 필요합니다
 
 ---
 
-## CodeBot 서비스 사용
+## CodeBot 설정
 
 ### GitHub Personal access token 등록
 
@@ -84,7 +101,7 @@ CodeBot 사용을 위해서는 GitHub에 대한 접근 권한이 필요합니다
 
 
 
-### CodeBot 서비스 설정
+### Repository 설정
 
 > CodeBot 서비스를 사용하기 위한 Repository 설정
 
@@ -250,3 +267,7 @@ Repository의 코드 정보
 ![](/images/codebot-result/codebot-result-autofix.png)
 
 * Count : 잠재결함 분석 결과를 토대로 제안된 자동 수정 건수
+
+## CodeBot 서비스 관련 문의
+
+> code_bot@samsung.com
