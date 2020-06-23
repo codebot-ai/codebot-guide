@@ -45,29 +45,29 @@ CodeBot은 GitHub으로부터 PR(Pull Request) 이벤트가 발생하면, 변경
 
 ### Codebot 사용 준비
 
-CodeBot 사용을 위해서는 GitHub에 대한 접근 권한이 필요합니다. 이를 위해 GitHub에서 Personal Access Token을 생성한 후 CodeBot에 등록이 필요합니다.
+CodeBot 사용을 위해서는 GitHub에 대한 접근 권한이 필요합니다.   이를 위해 GitHub에서 Personal Access Token을 생성한 후 CodeBot에 등록이 필요합니다.
 
 ### GitHub Personal access token 생성
 
 #### 1. 오른쪽 상단의 프로필 사진을 클릭한 다음 Settings를 클릭합니다.
 
-![](/images/github-access-token/github-access-token-01.png)
+<img src="images/github-access-token/github-access-token-01.png" width="20%" style="box-shadow: 5px 5px 10px grey" />
 
 #### 2. 왼쪽 사이드 바에서 Developer settings를 클릭합니다.
 
-![](/images/github-access-token/github-access-token-02.png)
+<img src="images/github-access-token/github-access-token-02.png" width="20%" style="box-shadow: 5px 5px 10px grey" />
 
 #### 3. 왼쪽 사이드 바에서 Personal access tokens를 클릭합니다.
 
-![](/images/github-access-token/github-access-token-03.png)
+<img src="images/github-access-token/github-access-token-03.png" width="20%" style="box-shadow: 5px 5px 10px grey" />
 
 #### 4. 오른쪽의 Generate new token을 클릭합니다.
 
-![](/images/github-access-token/github-access-token-04.png)
+<img src="images/github-access-token/github-access-token-04.png" width="50%" style="box-shadow: 5px 5px 10px grey" />
 
 #### 5. Token의 이름을 입력합니다.
 
-![](/images/github-access-token/github-access-token-05.png)
+<img src="images/github-access-token/github-access-token-05.png" width="40%" style="box-shadow: 5px 5px 10px grey" />
 
 #### 6. Token에 부여하려는 권한을 선택합니다. CodeBot 사용을 위해서 다음의 권한이 필요합니다.
 
@@ -75,15 +75,15 @@ CodeBot 사용을 위해서는 GitHub에 대한 접근 권한이 필요합니다
 * admin:org (Full control of orgs and teams, read and write org projects)
 * amdin:repo_hook (Full control of reporitory hooks)
 
-![](/images/github-access-token/github-access-token-06.png)
+<img src="images/github-access-token/github-access-token-06.png" width="50%" style="box-shadow: 5px 5px 10px grey" />
 
 #### 7. Generate token을 클릭합니다.
 
-![](/images/github-access-token/github-access-token-07.png)
+<img src="images/github-access-token/github-access-token-07.png" width="20%" style="box-shadow: 5px 5px 10px grey" />
 
-#### 8. :clipboard:버튼을 클릭하아여 클립보드에 복사합니다. 보안상의 이유로, 페이지를 떠나면 Token을 다시 볼 수 없습니다.
+#### 8. :clipboard:버튼을 클릭하아여 클립보드에 복사합니다.   보안상의 이유로, 페이지를 떠나면 Token을 다시 볼 수 없습니다.
 
-![](/images/github-access-token/github-access-token-08.png)
+<img src="images/github-access-token/github-access-token-08.png" width="50%" style="box-shadow: 5px 5px 10px grey" />
 
 ---
 
@@ -107,17 +107,17 @@ CodeBot 사용을 위해서는 GitHub에 대한 접근 권한이 필요합니다
 
 첫 설정 시 CodeBot 사용 유무를 선택하는 스위치를 클릭해 OFF상태를 ON으로 변경합니다.
 
-![](/images/codebot-settings/codebot-settings-off.png)
+<img src="images/codebot-settings/codebot-settings-off.png" width="80%" style="box-shadow: 5px 5px 10px grey" />
 
 CodeBot 스위치가 ON으로 변경되면 세부 설정을 위한 메뉴가 보입니다.
 
-![](/images/codebot-settings/codebot-settings-on.png)
+<img src="images/codebot-settings/codebot-settings-on.png" width="80%" style="box-shadow: 5px 5px 10px grey" />
 
 * #### 기본설정
 
   CodeBot 분석 적용 대상에 대한 기본적인 설정 항목입니다.
 
-  ![](/images/codebot-settings/codebot-settings-default.png)
+  <img src="images/codebot-settings/codebot-settings-default.png" width="80%" style="box-shadow: 5px 5px 10px grey" />
 
   * 사용 중인 언어 선택 : 분석 대상인 Repository에서 사용 중인 프로그래밍 언어를 선택합니다.
   * 적용 브랜치 범위(Branch) **[필수 입력값]** : 분석을 적용할 브랜치를 입력합니다.
@@ -130,7 +130,7 @@ CodeBot 스위치가 ON으로 변경되면 세부 설정을 위한 메뉴가 보
 
   > Java 언어 한정
 
-  ![](/images/codebot-settings/codebot-settings-inspection.png)
+  <img src="images/codebot-settings/codebot-settings-inspection.png" width="80%" style="box-shadow: 5px 5px 10px grey" />
 
   * Inspection 자동 수정 기능 : 활성화 시 분석된 잠재결함 결과 중 예상되는 조치 방안이 존재할 경우 코드 자동 수정을 제안하는 AutoFix 기능이 수행됩니다.
 
@@ -138,7 +138,7 @@ CodeBot 스위치가 ON으로 변경되면 세부 설정을 위한 메뉴가 보
 
   분석 대상이 되는 소스 코드의 범위를 지정할 수 있습니다.
 
-  ![](/images/codebot-settings/codebot-settings-analysis-scope.png)
+  <img src="images/codebot-settings/codebot-settings-analysis-scope.png" width="80%" style="box-shadow: 5px 5px 10px grey" />
 
   > Comma[,]로 구분하여 여러 패턴을 입력할 수 있습니다.
 
@@ -153,19 +153,18 @@ CodeBot 스위치가 ON으로 변경되면 세부 설정을 위한 메뉴가 보
 
   > Java 언어 한정
 
-  ![](/images/codebot-settings/codebot-settings-build-options.png)
+  <img src="images/codebot-settings/codebot-settings-build-options.png" width="80%" style="box-shadow: 5px 5px 10px grey" />
 
   * Build Tool : 사용할 Build 툴을 선택합니다.
-    > Command 선택 시 Build 명령어를 직접 입력할 수 있습니다.
-    ![](/images/codebot-settings/codebot-settings-build-command.png)
+    > Command 선택 시 Build 명령어를 직접 입력할 수 있습니다.   <img src="images/codebot-settings/codebot-settings-build-command.png" width="90%" style="box-shadow: 5px 5px 10px grey" />
   * Source Path **[필수 입력값]** : Build 시 적용할 소스 코드의 경로를 입력합니다.
   * Binary Path **[필수 입력값]** : Build 시 적용할 바이너리 코드의 경로를 입력합니다.
 
 입력을 마친 후 우측 하단의 Apply 버튼을 클릭하면 설정이 저장됩니다.
 
-![](/images/codebot-settings/codebot-settings-apply.png)
-
-![](/images/codebot-settings/codebot-settings-saved.png)
+<img src="images/codebot-settings/codebot-settings-apply.png" width="10%" style="box-shadow: 5px 5px 10px grey" />
+<br />
+<img src="images/codebot-settings/codebot-settings-saved.png" width="20%" style="box-shadow: 5px 5px 10px grey" />
 
 ### GitHub 설정 확인
 
@@ -175,7 +174,7 @@ CodeBot 서비스 사용위한 설정을 마치면 GitHub의 해당 Repository�
 
 > CodeBot 서비서 ON 시 추가되고, OFF 시 삭제됩니다.
 
-![](/images/github-settings/github-webhooks.png)
+<img src="images/github-settings/github-webhooks.png" width="70%" style="box-shadow: 5px 5px 10px grey" />
 
 ---
 
@@ -187,14 +186,14 @@ CodeBot 서비스 사용위한 설정을 마치면 GitHub의 해당 Repository�
 
 > CodeBot Dashboard의 Repository 리스트를 클릭하면 최근 Pull Request의 분석 결과를 볼 수 있습니다.
 
-![](/images/codebot-result/codebot-result-all.jpg)
+<img src="images/codebot-result/codebot-result-all.jpg" width="70%" style="box-shadow: 5px 5px 10px grey" />
 
 ### Repository Code Size
 
 Repository의 코드 정보
 > 분석 대상이 되는 Repository 내의 코드에 대한 정량적 수치입니다.
 
-![](/images/codebot-result/codebot-result-codesize.png)
+<img src="images/codebot-result/codebot-result-codesize.png" width="40%" style="box-shadow: 5px 5px 10px grey" />
 
 * Lines of Code : 공백, 주석을 제외한 코드 라인 수
 * Files : 파일 수
@@ -208,7 +207,7 @@ Repository의 코드 정보
 잠재결함 정보
 > 정적 분석을 통해 나타나는 코드의 문제점으로, 결함 발생 위험, 보안 취약, 유지보수 저해 등과 관련된 Rule에 따라 코드를 탐지하고 알려줍니다.
 
-![](/images/codebot-result/codebot-result-issue.png)
+<img src="images/codebot-result/codebot-result-issue.png" width="40%" style="box-shadow: 5px 5px 10px grey" />
 
 * Total : 전체 Codeing Rule 위반 건수
 * Bugs : 런타임 시 문제가 될 잠재적인 결함과 관련된 Rule 위반 건수
@@ -219,11 +218,11 @@ Repository의 코드 정보
 
 복잡도 정보
 
-> 코드를 통과하는 경로 수를 기반으로 계산된 Cyclomatic Complexity입니다. 복잡도가 높을수록 코드 수정 시 오류 발생 확률이 높아지고, 테스트를 위한 유지보수 비용이 증가합니다.
+> 코드를 통과하는 경로 수를 기반으로 계산된 Cyclomatic Complexity입니다.   복잡도가 높을수록 코드 수정 시 오류 발생 확률이 높아지고, 테스트를 위한 유지보수 비용이 증가합니다.
 
 > Java의 경우 복잡도 증가 Keyword는 if, for, while, case, catch, throw, &&, ||, ?
 
-![](/images/codebot-result/codebot-result-complexity.png)
+<img src="images/codebot-result/codebot-result-complexity.png" width="40%" style="box-shadow: 5px 5px 10px grey" />
 
 * Total : 전체 복잡도 수
 * Equal or Over 50 : 복잡도가 50 이상인 Function의 수
@@ -233,9 +232,9 @@ Repository의 코드 정보
 
 중복도 정보
 
-> 동일한 코드가 반복되는 것을 탐지하여 알려줍니다. 중복된 코드는 코드량과 유지보수 비용을 증가시키며 오류 발생 확률을 높이므로 리팩토링을 통한 개선이 필요합니다.
+> 동일한 코드가 반복되는 것을 탐지하여 알려줍니다.   중복된 코드는 코드량과 유지보수 비용을 증가시키며 오류 발생 확률을 높이므로 리팩토링을 통한 개선이 필요합니다.
 
-![](/images/codebot-result/codebot-result-duplication.png)
+<img src="images/codebot-result/codebot-result-duplication.png" width="40%" style="box-shadow: 5px 5px 10px grey" />
 
 * Total : 전체 중복률
 * Duplicated Lines : 중복 라인 수
@@ -245,9 +244,9 @@ Repository의 코드 정보
 
 코드 구조 분석 정보
 
-> 코드의 구조와 관련된 수치를 측정하여 알려줍니다. 측정된 수치를 기반으로 척도와 코드의 구조적 리팩토링을 위한 가이드를 제공합니다.
+> 코드의 구조와 관련된 수치를 측정하여 알려줍니다.   측정된 수치를 기반으로 척도와 코드의 구조적 리팩토링을 위한 가이드를 제공합니다.
 
-![](/images/codebot-result/codebot-result-cam.png)
+<img src="images/codebot-result/codebot-result-cam.png" width="80%" style="box-shadow: 5px 5px 10px grey" />
 
 * Cyclomatic Complexity - CC : 코드의 복잡성을 나타내는 수치로 Function 단위로 측정 (PMD의 Modified Cyclomatic Complexity Rule을 사용)
 * Duplication Code - DC : 두 번 이상 반복되는 코드를 파일 단위로 측정 (SonarQube의 중복도 측정 방식을 사용)
@@ -264,9 +263,11 @@ Repository의 코드 정보
 
 > Java 언어 한정
 
-![](/images/codebot-result/codebot-result-autofix.png)
+<img src="images/codebot-result/codebot-result-autofix.png" width="40%" style="box-shadow: 5px 5px 10px grey" />
 
 * Count : 잠재결함 분석 결과를 토대로 제안된 자동 수정 건수
+
+---
 
 ## CodeBot 서비스 관련 문의
 
