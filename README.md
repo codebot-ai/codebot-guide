@@ -1,23 +1,8 @@
-# CodeBot User Guide
+# CodeBot Service
 
 > CodeBot 시스템은 개발자와 리뷰어간의 원활한 코드리뷰 수행을 지원하기 위해 다양한 자동화 기능을 제공하는 코드리뷰 지원 서비스입니다.
 
-## 목차
-
-* [개요](#개요)
-* [준비 사항](#준비-사항)
-* [CodeBot 설정](#codebot-설정)
-  * [GitHub Personal access token 등록](#github-personal-access-token-등록)
-  * [Repository 조회](#repository-조회)
-  * [Repository 설정](#repository-설정)
-* [CodeBot 분석 수행](#codebot-분석-수행)
-* [CodeBot 분석 결과 확인](#codebot-분석-결과-확인)
-  * [Repository Code Size](#repository-code-size)
-  * [Issue(Inspection)](#issue(inspection))
-  * [Complexity](#complexity)
-  * [Duplication](#duplication)
-  * [CAM(Code Architecture Metric)](#cam(code-architecture-metric))
-  * [AutoFix Recommendations](#autofix-recommendations)
+## [CodeBot User Guide](https://github.com/codebot-ai/codebot-guide/wiki)
 
 ## 개요
 
@@ -39,15 +24,13 @@ CodeBot은 GitHub으로부터 PR(Pull Request) 이벤트가 발생하면, 변경
 * JavaScript
 * Python
 
+![](/images/codebot-use-case-01.jpg)
+![](/images/codebot-use-case-02.jpg)
+![](/images/codebot-use-case-03.jpg)
+
 ---
 
-## 준비 사항
-
-### Codebot 사용 준비
-
-CodeBot 사용을 위해서는 GitHub에 대한 접근 권한이 필요합니다.   이를 위해 GitHub에서 Personal Access Token을 생성한 후 CodeBot에 등록이 필요합니다.
-
-### GitHub Personal access token 생성
+## GitHub Personal access token 생성
 
 #### 1. 오른쪽 상단의 프로필 사진을 클릭한 다음 Settings를 클릭합니다.
 
@@ -84,101 +67,6 @@ CodeBot 사용을 위해서는 GitHub에 대한 접근 권한이 필요합니다
 #### 8. :clipboard:버튼을 클릭하아여 클립보드에 복사합니다.   보안상의 이유로, 페이지를 떠나면 Token을 다시 볼 수 없습니다.
 
 <img src="images/github-access-token/github-access-token-08.png" width="50%" style="box-shadow: 5px 5px 10px grey" />
-
----
-
-## CodeBot 설정
-
-### GitHub Personal access token 등록
-
-> 발급받은 Token을 CodeBot에 등록합니다.
-
-
-
-### Repository 조회
-
-> 등록한 Token으로 접근 가능한 Repository를 보여줍니다.
-
-
-
-### Repository 설정
-
-> CodeBot 서비스를 사용하기 위한 Repository 설정
-
-첫 설정 시 CodeBot 사용 유무를 선택하는 스위치를 클릭해 OFF상태를 ON으로 변경합니다.
-
-<img src="images/codebot-settings/codebot-settings-off.png" width="80%" style="box-shadow: 5px 5px 10px grey" />
-
-CodeBot 스위치가 ON으로 변경되면 세부 설정을 위한 메뉴가 보입니다.
-
-<img src="images/codebot-settings/codebot-settings-on.png" width="80%" style="box-shadow: 5px 5px 10px grey" />
-
-* #### 기본설정
-
-  CodeBot 분석 적용 대상에 대한 기본적인 설정 항목입니다.
-
-  <img src="images/codebot-settings/codebot-settings-default.png" width="80%" style="box-shadow: 5px 5px 10px grey" />
-
-  * 사용 중인 언어 선택 : 분석 대상인 Repository에서 사용 중인 프로그래밍 언어를 선택합니다.
-  * 적용 브랜치 범위(Branch) **[필수 입력값]** : 분석을 적용할 브랜치를 입력합니다.
-    > Comma[,]로 구분하여 여러 브랜치 패턴을 입력할 수 있습니다.
-  * 리뷰어 자동 지정 : 활성화 시 분석한 Pull request의 리뷰어를 자동으로 지정합니다.
-
-* #### 잠재결함 분석
-
-  잠재결함 분석 시 사용되는 추가 설정 항목입니다.
-
-  > Java 언어 한정
-
-  <img src="images/codebot-settings/codebot-settings-inspection.png" width="80%" style="box-shadow: 5px 5px 10px grey" />
-
-  * Inspection 자동 수정 기능 : 활성화 시 분석된 잠재결함 결과 중 예상되는 조치 방안이 존재할 경우 코드 자동 수정을 제안하는 AutoFix 기능이 수행됩니다.
-
-* #### Analysis Scope
-
-  분석 대상이 되는 소스 코드의 범위를 지정할 수 있습니다.
-
-  <img src="images/codebot-settings/codebot-settings-analysis-scope.png" width="80%" style="box-shadow: 5px 5px 10px grey" />
-
-  > Comma[,]로 구분하여 여러 패턴을 입력할 수 있습니다.
-
-  > Wildcard(*, **, ?)를 이용한 패턴을 사용할 수 있습니다.
-
-  * Source File Exclusions : 분석 대상에서 제외할 소스 경로를 입력합니다.
-  * Source File Inclusions : 분석 대상에 포함할 소스 경로를 입력합니다.
-
-* #### Build Options
-
-  분석을 위해 사전 수행되는 Build에 대한 설정입니다.
-
-  > Java 언어 한정
-
-  <img src="images/codebot-settings/codebot-settings-build-options.png" width="80%" style="box-shadow: 5px 5px 10px grey" />
-
-  * Build Tool : 사용할 Build 툴을 선택합니다.
-    > Command 선택 시 Build 명령어를 직접 입력할 수 있습니다.   <img src="images/codebot-settings/codebot-settings-build-command.png" width="90%" style="box-shadow: 5px 5px 10px grey" />
-  * Source Path **[필수 입력값]** : Build 시 적용할 소스 코드의 경로를 입력합니다.
-  * Binary Path **[필수 입력값]** : Build 시 적용할 바이너리 코드의 경로를 입력합니다.
-
-입력을 마친 후 우측 하단의 Apply 버튼을 클릭하면 설정이 저장됩니다.
-
-<img src="images/codebot-settings/codebot-settings-apply.png" width="10%" style="box-shadow: 5px 5px 10px grey" />
-<br />
-<img src="images/codebot-settings/codebot-settings-saved.png" width="20%" style="box-shadow: 5px 5px 10px grey" />
-
-### GitHub 설정 확인
-
-CodeBot 서비스 사용위한 설정을 마치면 GitHub의 해당 Repository에 Webhook이 설정됩니다.
-
-> GitHub > Repository > Settings > Webhooks에서 Payload URL을 확인
-
-> CodeBot 서비서 ON 시 추가되고, OFF 시 삭제됩니다.
-
-<img src="images/github-settings/github-webhooks.png" width="70%" style="box-shadow: 5px 5px 10px grey" />
-
----
-
-## CodeBot 분석 수행
 
 ---
 
@@ -269,6 +157,6 @@ Repository의 코드 정보
 
 ---
 
-## CodeBot 서비스 관련 문의
+## CodeBot 서비스 문의
 
 > code_bot@samsung.com
