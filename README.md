@@ -2,9 +2,7 @@
 
 > CodeBot 시스템은 개발자와 리뷰어간의 원활한 코드리뷰 수행을 지원하기 위해 다양한 자동화 기능을 제공하는 코드리뷰 지원 서비스입니다.
 
-## [CodeBot User Guide](https://github.com/codebot-ai/codebot-guide/wiki)
-
-## 개요
+## [How to use CodeBot (User Guide)](https://github.com/codebot-ai/codebot-guide/wiki)
 
 CodeBot은 GitHub으로부터 PR(Pull Request) 이벤트가 발생하면, 변경된 소스를 기준으로 다양한 정적 분석(Static Analyst)을 수행하고, 리뷰어를 자동 지정하는 등의 코드리뷰 활동에 필요한 다양한 서비스를 제공합니다.
 
